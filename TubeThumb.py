@@ -5,8 +5,6 @@ from pytube import exceptions
 from pytube import YouTube
 from urllib.request import urlretrieve
 
-isRunning = True
-
 downloads_folder = os.path.join(os.path.expanduser('~'), 'Downloads')
 
 # Get Youtube Thumbnail
@@ -24,7 +22,7 @@ def Get_Thumbnail(link):
 print("Youtube Thumbnail Downloader")
 print('To close program, hit option C or type "quit"')
 
-while isRunning:
+while True:
     user_input = input('Enter Youtube Link: ')
     if user_input == 'quit':
         isRunning = False
